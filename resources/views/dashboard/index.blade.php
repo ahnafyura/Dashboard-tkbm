@@ -170,5 +170,5 @@
                 resetCounter();
             })
             .catch(err => console.error(err));
-    }, 3000);
+    }, 3500);
 </script>

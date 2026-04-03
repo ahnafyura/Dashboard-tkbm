@@ -23,21 +23,3 @@ use Illuminate\Support\Facades\Route;
 // ── Telemetry ingestion (ESP32 → server) ─────────────────────────────────
 Route::post('telemetry', [TelemetryController::class, 'store'])
      ->name('api.telemetry.store');
-
-// ── Dashboard polling endpoints (browser ← server) ────────────────────────
-Route::get('telemetry/latest', [TelemetryController::class, 'latest'])
-     ->name('api.telemetry.latest');
-
-Route::get('telemetry/hr-trend/{device_id}', [TelemetryController::class, 'hrTrend'])
-     ->name('api.telemetry.hr-trend')
-     ->where('device_id', '[A-Za-z0-9\-_]+');
-
-Route::get('telemetry/alerts', [TelemetryController::class, 'alerts'])
-     ->name('api.telemetry.alerts');
-
-// ── Health check (Vercel / load balancer probe) ───────────────────────────
-Route::get('health', fn () => response()->json([
-    'status'  => 'ok',
-    'service' => 'SENSE-TKBM API',
-    'time'    => now()->toISOString(),
-]))->name('api.health');

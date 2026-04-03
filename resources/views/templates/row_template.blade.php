@@ -10,15 +10,27 @@
                 </div>
 
                 <div class="col-3">
+                    @if ($snapshot->is_active)
                     {{ $snapshot->gps_lat }}, {{ $snapshot->gps_long }}
+                    @else
+                    _
+                    @endif
                 </div>
 
                 <div class="col-3">
+                    @if ($snapshot->is_active)
                     {{ $snapshot->battery_level }}
+                    @else
+                    _
+                    @endif
                 </div>
 
                 <div class="col-3">
+                    @if ($snapshot->is_active)
                     {{ $snapshot->uptime }}
+                    @else
+                    _
+                    @endif
                 </div>
             </div>
         </div>

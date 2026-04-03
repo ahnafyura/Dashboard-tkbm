@@ -19,13 +19,13 @@ function secondsToHms($seconds) {
                     {{ $snapshot->device_id }}
                 </div>
 
-                <div class="col-2">
+                {{-- <div class="col-2">
                     @if ($snapshot->is_active)
                     {{ $snapshot->gps_lat }}, {{ $snapshot->gps_long }}
                     @else
                     _
                     @endif
-                </div>
+                </div> --}}
 
                 <div class="col-3">
                     @if ($snapshot->is_active)

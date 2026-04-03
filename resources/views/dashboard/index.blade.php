@@ -48,7 +48,7 @@
 
             <div class="col-3">
                 <div class="card shadow rounded-3 p-3 h-100">
-                    <h4> Cognitive Load Index </h4>
+                    <h4> Physical Load Index </h4>
 
                 </div>
             </div>

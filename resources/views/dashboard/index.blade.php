@@ -63,7 +63,7 @@
             {{-- row headers --}}
             <div class="row">  
                 {{-- id zone battery uptime --}}
-                <div class="col-6 border-bottom border-end border-3"> 
+                <div class="col-4 border-bottom border-end border-3"> 
                     <div class="row my-2"> 
                         <div class="col-3"> 
                             ID
@@ -83,18 +83,26 @@
                     </div>
                 </div>
                 {{-- worktime hr fatigue incident status --}}
-                <div class="col-6 border-bottom border-3"> 
+                <div class="col-8 border-bottom border-3"> 
                     <div class="row my-2"> 
-                        <div class="col-3"> 
+                        <div class="col-2"> 
                             WORK TIME
                         </div>
         
-                        <div class="col-2"> 
-                            HR
-                        </div>
+                        <div class="col-5"> 
+                            <div class="row"> 
+                                <div class="col-3"> 
+                                    HR
+                                </div>
+                
+                                <div class="col-4"> 
+                                    SpO2
+                                </div>
         
-                        <div class="col-2"> 
-                            FATIGUE
+                                <div class ="col-5"> 
+                                    FATIGUE
+                                </div>
+                            </div>
                         </div>
         
                         <div class="col-5"> 
@@ -114,7 +122,7 @@
             {{-- row example --}}
             <div class="row">  
                 {{-- id zone battery uptime --}}
-                <div class="col-6 border-bottom border-end border-3"> 
+                <div class="col-4 border-bottom border-end border-3"> 
                     <div class="row my-2"> 
                         <div class="col-3"> 
                             P01
@@ -134,18 +142,26 @@
                     </div>
                 </div>
                 {{-- worktime hr fatigue incident status --}}
-                <div class="col-6 border-bottom border-3"> 
+                <div class="col-8 border-bottom border-3"> 
                     <div class="row my-2"> 
-                        <div class="col-3"> 
+                        <div class="col-2"> 
                             6:30:30
                         </div>
         
-                        <div class="col-2"> 
-                            100
-                        </div>
+                        <div class="col-5"> 
+                            <div class="row"> 
+                                <div class="col-3"> 
+                                    100
+                                </div>
+                
+                                <div class="col-4"> 
+                                    50%
+                                </div>
         
-                        <div class="col-2"> 
-                            50%
+                                <div class ="col-5"> 
+                                    90%
+                                </div>
+                            </div>
                         </div>
         
                         <div class="col-5"> 

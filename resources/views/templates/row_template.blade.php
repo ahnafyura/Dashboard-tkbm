@@ -23,6 +23,7 @@
             </div>
         </div>
         {{-- worktime hr fatigue incident status --}}
+        @if ($snapshot->is_active)
         <div class="col-8 border-bottom border-3">
             <div class="row my-2">
                 <div class="col-2">
@@ -50,5 +51,8 @@
                 </div>
             </div>
         </div>
+        @else
+        <div class="col-8 border-bottom border-3"> </div>
+        @endif
     </div>
 @endforeach

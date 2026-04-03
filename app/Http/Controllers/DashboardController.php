@@ -15,15 +15,17 @@ class DashboardController extends Controller
 
     public function get_latest_device_data_view() : View
     {
-        $data = DB::select(
-            'SELECT dl.*
-             FROM tkbm.device_log dl
-             JOIN (
-                 SELECT device_id, MAX(timestamp) AS latest_ts
-                 FROM tkbm.device_log
-                 GROUP BY device_id
-             ) latest
-             ON dl.device_id = latest.device_id AND dl.timestamp = latest.latest_ts'
+        $data = DB::select('
+            SELECT dl.*, d.*
+            FROM tkbm.device_log dl
+            JOIN (
+                SELECT device_id, MAX(timestamp) AS latest_ts
+                FROM tkbm.device_log
+                GROUP BY device_id
+            ) latest
+            ON dl.device_id = latest.device_id AND dl.timestamp = latest.latest_ts
+            join tkbm.devices d on d.device_id = dl.device_id 
+            '
         );
 
         return view('templates.row_template', ['data' => $data]);

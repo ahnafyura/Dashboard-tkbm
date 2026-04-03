@@ -163,7 +163,7 @@
 
     // for updating the rows of devices
     setInterval(() => {
-        fetch('/test')
+        fetch('/fetch-device-data')
             .then(res => res.text())
             .then(html => {
                 document.getElementById('data-container').innerHTML = html;

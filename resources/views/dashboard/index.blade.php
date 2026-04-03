@@ -21,7 +21,7 @@
                 <div class="card rounded-5 shadow">
                     <div class="row m-3  d-flex align-items-center justify-content-between">
                         <div class="col-auto d-flex align-items-center">
-                            0 / 0 Aktif
+                            <span id="total-devices"> </span> &nbsp; Aktif
                         </div>
                         <div class="col-auto d-flex align-items-center justify-content-center">
                             Update: &nbsp; <span id="seconds">0</span>s yang lalu
@@ -50,7 +50,7 @@
                     <div class="d-flex justify-content-center align-items-center text-center h-100">
                         <div>
                             <h1 class="mb-3">0</h1>
-                            <div class="card rounded-5 p-2">0 Critical</div>
+                            {{-- <div class="card rounded-5 p-2">0 Critical</div> --}}
                         </div>
                     </div>
 
@@ -123,21 +123,14 @@
                             </div>
                         </div>
 
-                        <div class="col-5">
-                            <div class="row">
-                                <div class="col-6">
-                                    INCIDENT
-                                </div>
-                                <div class="col-6">
-                                    STATUS
-                                </div>
-                            </div>
+                        <div class="col-2">
+                            STATUS
                         </div>
                     </div>
                 </div>
             </div>
 
-            <span id="data-container"> 
+            <span id="data-container">
 
             </span>
         </div>
@@ -170,5 +163,12 @@
                 resetCounter();
             })
             .catch(err => console.error(err));
+
+        fetch('/fetch-total-devices')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('total-devices').innerHTML = html;
+            })
+            .catch(err => console.error(err))
     }, 3500);
 </script>

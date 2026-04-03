@@ -45,15 +45,8 @@
                     </div>
                 </div>
 
-                <div class="col-5">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="card rounded-5 text-center"> NULL </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card rounded-5 text-center"> {{ $snapshot->status }} </div>
-                        </div>
-                    </div>
+                <div class="col-2">
+                    <div class="card rounded-5 text-center"> {{ $snapshot->status }} </div>
                 </div>
             </div>
         </div>

@@ -28,4 +28,16 @@ class DashboardController extends Controller
 
         return view('templates.row_template', ['data' => $data]);
     }
+
+    public function get_active_devices_view() : View
+    {
+        $data = DB::select('
+            SELECT 
+                COUNT(*) AS total_devices,
+                COUNT(*) FILTER (WHERE d.is_active) AS active_devices
+            FROM tkbm.devices d;
+        ');
+
+        return view('templates.active_devices_template', ['data' => $data]);
+    }
 }

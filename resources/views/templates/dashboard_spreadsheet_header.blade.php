@@ -45,7 +45,7 @@
             <div class="col-6">
                 <div class="row">
                     <div class="col-3">
-                        HR
+                        HR (BpM)
                     </div>
 
                     <div class="col-4">

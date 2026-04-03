@@ -63,7 +63,7 @@ function secondsToHms($seconds) {
                 <div class="col-6">
                     <div class="row">
                         <div class="col-3">
-                            {{ $snapshot->hr_bpm }}bpm
+                            {{ $snapshot->hr_bpm }}
                         </div>
 
                         <div class="col-4">

@@ -21,7 +21,7 @@
             <i class="h1 bi bi-list m-0"></i>
         </button>
 
-        <div class="p-5">
+        <div class="px-5 pt-2">
 
             {{-- title row --}}
             <div class="row">

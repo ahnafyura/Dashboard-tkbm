@@ -12,31 +12,7 @@
 
 <div class="d-flex">
 
-    <!-- Sidebar -->
-    <div class="collapse collapse-horizontal" id="sidebar">
-        <div class="m-5 pt-5">
-            <div class="card shadow p-4 mt-5"> 
-                <i class="text-center h2 bi bi-people-fill m-0"></i>
-            </div>
-            <div class="text-center mt-2"> 
-                Monitor Kondisi
-            </div>
-
-            <div class="card shadow p-4 mt-5"> 
-                <i class="text-center h2 bi bi-people-fill m-0"></i>
-            </div>
-            <div class="text-center mt-2"> 
-                Monitor Kondisi
-            </div>
-
-            <div class="card shadow p-4 mt-5"> 
-                <i class="text-center h2 bi bi-people-fill m-0"></i>
-            </div>
-            <div class="text-center mt-2"> 
-                Monitor Kondisi
-            </div>
-        </div>
-    </div>
+    @include('templates.sidebar')
 
     <div class="container-fluid p-2">
 

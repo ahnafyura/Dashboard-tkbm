@@ -3,23 +3,5 @@
 use App\Http\Controllers\Api\TelemetryController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| SENSE-TKBM API Routes  —  /api/*
-|--------------------------------------------------------------------------
-| All routes here are stateless (no CSRF, session middleware is stripped).
-| Rate-limiting is applied via the "api" middleware group (60/min default).
-|
-| ESP32 Authentication Strategy:
-|   Option A (simple)  : Shared API key in X-API-Key header → validated in
-|                         middleware/HandleApiKey.php (add when ready).
-|   Option B (scalable): Laravel Sanctum token tied to each device.
-|
-| For MVP we leave the store endpoint open and rely on:
-|   - Device-ID whitelist check (inside controller)
-|   - VPN / firewall rules at infra level
-*/
 
-// ── Telemetry ingestion (ESP32 → server) ─────────────────────────────────
-Route::post('telemetry', [TelemetryController::class, 'store'])
-     ->name('api.telemetry.store');
+Route::post('telemetry/store', [TelemetryController::class, 'store_device_state']);

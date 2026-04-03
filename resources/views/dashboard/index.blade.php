@@ -90,56 +90,7 @@
                 </div>
 
                 {{-- row headers --}}
-                <div class="row">
-                    {{-- id zone battery uptime --}}
-                    <div class="col-4 border-bottom border-end border-3">
-                        <div class="row my-2">
-                            <div class="col-3">
-                                ID
-                            </div>
-
-                            <div class="col-3">
-                                ZONE
-                            </div>
-
-                            <div class="col-3">
-                                BATTERY
-                            </div>
-
-                            <div class="col-3">
-                                UPTIME
-                            </div>
-                        </div>
-                    </div>
-                    {{-- worktime hr fatigue incident status --}}
-                    <div class="col-8 border-bottom border-3">
-                        <div class="row my-2">
-                            <div class="col-2">
-                                WORK TIME
-                            </div>
-
-                            <div class="col-5">
-                                <div class="row">
-                                    <div class="col-3">
-                                        HR
-                                    </div>
-
-                                    <div class="col-4">
-                                        SpO2
-                                    </div>
-
-                                    <div class ="col-5">
-                                        FATIGUE
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-2">
-                                STATUS
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @include("templates.dashboard_spreadsheet_header")
 
                 <span id="data-container">
 
@@ -182,7 +133,7 @@
                 document.getElementById('total-devices').innerHTML = html;
             })
             .catch(err => console.error(err))
-    }, 3500);
+    }, 1500);
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

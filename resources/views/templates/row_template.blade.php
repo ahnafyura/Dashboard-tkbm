@@ -29,7 +29,7 @@ function secondsToHms($seconds) {
 
                 <div class="col-3">
                     @if ($snapshot->is_active)
-                    {{ $snapshot->battery_level }}
+                    {{ $snapshot->battery_level * 100}}%
                     @else
                     _
                     @endif
@@ -56,27 +56,27 @@ function secondsToHms($seconds) {
         @if ($snapshot->is_active)
         <div class="col-6 border-bottom border-3">
             <div class="row my-2">
-                <div class="col-2">
+                <div class="col-3">
                     {{ secondsToHms($snapshot->work_time) }}
                 </div>
 
-                <div class="col-5">
+                <div class="col-6">
                     <div class="row">
                         <div class="col-3">
-                            {{ $snapshot->hr_bpm }}
+                            {{ $snapshot->hr_bpm }}bpm
                         </div>
 
                         <div class="col-4">
-                            {{ $snapshot->sp_o2 }}
+                            {{ $snapshot->sp_o2 * 100 }}%
                         </div>
 
                         <div class ="col-5">
-                            {{ $snapshot->fatigue }}
+                            {{ $snapshot->fatigue * 100 }}%
                         </div>
                     </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-3">
                     <div class="card rounded-5 text-center"> {{ $snapshot->status }} </div>
                 </div>
             </div>

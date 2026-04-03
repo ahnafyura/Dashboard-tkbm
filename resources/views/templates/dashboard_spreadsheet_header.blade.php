@@ -26,11 +26,11 @@
     {{-- worktime hr fatigue incident status --}}
     <div class="col-6 border-bottom border-3">
         <div class="row my-2">
-            <div class="col-2">
+            <div class="col-3">
                 WORK TIME
             </div>
 
-            <div class="col-5">
+            <div class="col-6">
                 <div class="row">
                     <div class="col-3">
                         HR
@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            <div class="col-2">
+            <div class="col-3">
                 STATUS
             </div>
         </div>

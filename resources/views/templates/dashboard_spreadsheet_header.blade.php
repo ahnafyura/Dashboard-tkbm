@@ -1,6 +1,6 @@
 <div class="row">
     {{-- id zone battery uptime --}}
-    <div class="col-6 border-bottom border-end border-3">
+    <div class="col-6 border-bottom border-end border-2 base-border-color">
         <div class="row my-2">
             <div class="col h4">
                 Device Status
@@ -30,7 +30,7 @@
         </div>
     </div>
     {{-- worktime hr fatigue incident status --}}
-    <div class="col-6 border-bottom border-3">
+    <div class="col-6 border-bottom border-2 base-border-color">
         <div class="row my-2">
             <div class="col h4">
                 Worker Status

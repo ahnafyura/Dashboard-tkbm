@@ -1,0 +1,24 @@
+.min-card-size {
+    min-height: 300px;
+}
+
+.base-background-color {
+    background-color: #040c16;
+}
+
+.base-card-background-color {
+    background-color: #0c131f;
+}
+
+.second-card-background-color {
+    background-color: #161f2d;
+}
+
+.base-font-color {
+    color: #49c095;
+}
+
+.base-border-color {
+    border-color: #123456 !important;
+}
+

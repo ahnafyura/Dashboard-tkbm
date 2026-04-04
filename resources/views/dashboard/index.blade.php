@@ -2,103 +2,100 @@
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-
-    <style>
-        .min-card-size {
-            min-height: 300px;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
-<div class="d-flex">
+<body class="base-background-color">
+    <div class="d-flex">
 
-    @include('templates.sidebar')
+        @include('templates.sidebar')
 
-    <div class="container-fluid p-2">
+        <div class="container-fluid p-2">
 
-        {{-- toggle sidebar button --}}
-        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar">
-            <i class="h1 bi bi-list m-0"></i>
-        </button>
+            {{-- toggle sidebar button --}}
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar">
+                <i class="h1 base-font-color bi bi-list m-0"></i>
+            </button>
 
-        <div class="px-5 pt-2">
+            <div class="px-5 pt-2">
 
-            {{-- title row --}}
-            <div class="row">
-                <div class="col-6">
-                    <h1> Informasi Kondisi Pekerja</h1>
-                </div>
-                <div class="col-6">
-                    <div class="card rounded-5 shadow">
-                        <div class="row m-3  d-flex align-items-center justify-content-between">
-                            <div class="col-auto d-flex align-items-center">
-                                <span id="total-devices"> </span> &nbsp; Aktif
-                            </div>
-                            <div class="col-auto d-flex align-items-center justify-content-center">
-                                Update: &nbsp; <span id="seconds">0</span>s yang lalu
-                            </div>
-                            <div class="col-auto d-flex align-items-center justify-content-end">
-                                <i class="fs-1 bi bi-reception-4"></i>
+                {{-- title row --}}
+                <div class="row">
+                    <div class="col-6">
+                        <h1 class="base-font-color"> Informasi Kondisi Pekerja</h1>
+                    </div>
+                    <div class="col-6">
+                        <div class="card border-2 base-border-color base-font-color base-card-background-color  rounded-5 shadow">
+                            <div class="row m-3  d-flex align-items-center justify-content-between">
+                                <div class="col-auto d-flex align-items-center">
+                                    <span id="total-devices"> </span> &nbsp; Aktif
+                                </div>
+                                <div class="col-auto d-flex align-items-center justify-content-center">
+                                    Update: &nbsp; <span id="seconds">0</span>s yang lalu
+                                </div>
+                                <div class="col-auto d-flex align-items-center justify-content-end">
+                                    <i class="fs-1 bi bi-reception-4"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            {{-- summary cards row --}}
-            <div class="row mt-5 align-items-stretch d-flex">
-                {{-- <div class="col-6">
-                <div class="card shadow rounded-3 p-3 h-100">
+                {{-- summary cards row --}}
+                <div class="row mt-5 align-items-stretch d-flex">
+                    {{-- <div class="col-6">
+                <div class="card base-font-color base-card-background-color  shadow rounded-3 p-3 h-100">
                     <h4> Zona Panas </h4>
 
                     <img class="img-fluid rounded-3" src="https://picsum.photos/seed/picsum/800/300">
                 </div>
             </div> --}}
 
-                <div class="col-3">
-                    <div class="card min-card-size shadow rounded-3 p-3 h-100">
-                        <h4 class="mb-3">Active Incidents</h4>
-                        <div class="d-flex justify-content-center align-items-center text-center h-100">
-                            <div>
-                                <h1 class="mb-3">0</h1>
-                                {{-- <div class="card rounded-5 p-2">0 Critical</div> --}}
+                    <div class="col-3">
+                        <div class="card border-2 base-border-color base-font-color base-card-background-color  min-card-size shadow rounded-3 p-3 h-100">
+                            <h4 class="mb-3">Active Incidents</h4>
+                            <div class="d-flex justify-content-center align-items-center text-center h-100">
+                                <div>
+                                    <h1 class="mb-3">0</h1>
+                                    {{-- <div class="card base-card-background-color  rounded-5 p-2">0 Critical</div> --}}
+                                </div>
                             </div>
-                        </div>
 
-                        {{-- <div class="row d-flex justify-content-between"> 
+                            {{-- <div class="row d-flex justify-content-between"> 
                         <div class="col-auto"> Last updated: </div>
                         <div class="col"> PLACEHOLDER-TIME </div>
                     </div> --}}
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-3">
-                    <div class="card min-card-size shadow rounded-3 p-3 h-100">
-                        <h4> Physical Load Index </h4>
+                    <div class="col-3">
+                        <div class="card border-2 base-border-color base-font-color base-card-background-color  min-card-size shadow rounded-3 p-3 h-100">
+                            <h4> Physical Load Index </h4>
 
-                        <div class="d-flex justify-content-center align-items-center h-100">
-                            <h1 class=> 0% </h1>
+                            <div class="d-flex justify-content-center align-items-center h-100">
+                                <h1 class=> 0% </h1>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            {{-- telemetrys --}}
-            <div class="card shadow mt-5 h-50 p-3">
-                <div class="row">
-                    <h2> Live telemetry field</h2>
+                {{-- telemetrys --}}
+                <div class="card border-2 base-border-color base-font-color base-card-background-color  shadow mt-5 h-50 p-3">
+                    <div class="row">
+                        <h2> Live telemetry field</h2>
+                    </div>
+
+                    {{-- row headers --}}
+                    @include('templates.dashboard_spreadsheet_header')
+
+                    <span id="data-container">
+
+                    </span>
                 </div>
-
-                {{-- row headers --}}
-                @include("templates.dashboard_spreadsheet_header")
-
-                <span id="data-container">
-
-                </span>
             </div>
         </div>
     </div>
-</div>
+</body>
 
 <script>
     let seconds = 0;

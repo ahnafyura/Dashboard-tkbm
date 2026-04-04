@@ -13,7 +13,7 @@ function secondsToHms($seconds) {
 @foreach ($data as $snapshot)
     <div class="row">
         {{-- id zone battery uptime --}}
-        <div class="col-6 border-bottom border-end border-3">
+        <div class="col-6 border-bottom border-end border-2 base-border-color">
             <div class="row my-2">
                 <div class="col-2">
                     {{ $snapshot->device_id }}
@@ -54,7 +54,7 @@ function secondsToHms($seconds) {
         </div>
         {{-- worktime hr fatigue incident status --}}
         @if ($snapshot->is_active)
-        <div class="col-6 border-bottom border-3">
+        <div class="col-6 border-bottom border-2 base-border-color">
             <div class="row my-2">
                 <div class="col-3">
                     {{ secondsToHms($snapshot->work_time) }}
@@ -77,12 +77,11 @@ function secondsToHms($seconds) {
                 </div>
 
                 <div class="col-3">
-                    <div class="card rounded-5 text-center"> {{ $snapshot->status }} </div>
+                    <div class="card py-2 border-2 second-card-background-color base-font-color rounded-5 text-center"> {{ $snapshot->status }} </div>
                 </div>
             </div>
         </div>
         @else
-        <div class="col-6 border-bottom border-3"> </div>
         @endif
     </div>
 @endforeach

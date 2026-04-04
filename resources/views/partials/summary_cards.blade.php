@@ -8,7 +8,6 @@
             <div class="d-flex justify-content-center align-items-center text-center h-100">
                 <div>
                     <h1 id="active-incidents-counter" class="mb-3"> ... </h1>
-                    {{-- <div class="card base-card-background-color  rounded-5 p-2">0 Critical</div> --}}
                 </div>
             </div>
         </div>

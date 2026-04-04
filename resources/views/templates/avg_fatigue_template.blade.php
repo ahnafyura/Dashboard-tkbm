@@ -1,3 +1,5 @@
-@foreach($data as $d)
- {{ floor($d->avg * 100) }}%
+@foreach ($data as $d)
+    <span style="font-size: 200%">
+        {{ floor($d->avg * 100) }}%
+    </span>
 @endforeach

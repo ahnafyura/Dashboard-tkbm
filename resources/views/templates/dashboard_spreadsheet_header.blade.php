@@ -3,7 +3,7 @@
     <div class="col-6 border-bottom border-end border-2 base-border-color">
         <div class="row my-2">
             <div class="col h4">
-                Device Status
+                Status Device
             </div>
         </div>
 
@@ -12,12 +12,8 @@
                 ID
             </div>
 
-            {{-- <div class="col-2">
-                ZONE
-            </div> --}}
-
             <div class="col-2">
-                BATTERY
+                BATERAI
             </div>
 
             <div class="col-3">
@@ -25,7 +21,7 @@
             </div>
 
             <div class="col-3">
-                LAST UPDATED AGO
+                WAKTU SEJAK UPDATE
             </div>
         </div>
     </div>
@@ -33,13 +29,13 @@
     <div class="col-6 border-bottom border-2 base-border-color">
         <div class="row my-2">
             <div class="col h4">
-                Worker Status
+                Status Pekerja
             </div>
         </div>
 
         <div class="row my-2">
             <div class="col-3">
-                WORK TIME
+                WAKTU KERJA
             </div>
 
             <div class="col-6">
@@ -53,7 +49,7 @@
                     </div>
 
                     <div class ="col-5">
-                        FATIGUE
+                        KELELAHAN
                     </div>
                 </div>
             </div>

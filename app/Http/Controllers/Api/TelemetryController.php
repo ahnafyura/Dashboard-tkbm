@@ -16,7 +16,6 @@ class TelemetryController extends Controller
     // ---------------------------------------------------------------
     public function store_device_state(Request $request): JsonResponse
     {
-        // 1. Validate incoming JSON
         $validator = Validator::make($request->all(), [
             'device_id'      => ['required', 'int'],
             'timestamp'      => ['required', 'int'],

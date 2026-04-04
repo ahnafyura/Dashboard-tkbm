@@ -33,7 +33,7 @@
                                 <div class="col-auto d-flex align-items-center justify-content-center">
                                     Update: &nbsp; <span id="seconds">0</span>s yang lalu
                                 </div>
-                                <div class="col-auto d-flex align-items-center justify-content-end">
+                                <div class="col d-flex align-items-center justify-content-end">
                                     <i class="fs-1 bi bi-reception-4"></i>
                                 </div>
                             </div>

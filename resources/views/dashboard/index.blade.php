@@ -94,20 +94,6 @@
                 document.getElementById('total-devices').innerHTML = html;
             })
             .catch(err => console.error(err));
-        
-        fetch('/fetch-avg-fatigue')
-        .then(res => res.text())
-            .then(html => {
-                document.getElementById('avg-fatigue').innerHTML = html;
-            })
-            .catch(err => console.error(err));
-        
-        fetch('/fetch-incident-count')
-        .then(res => res.text())
-            .then(html => {
-                document.getElementById('active-incidents-counter').innerHTML = html;
-            })
-            .catch(err => console.error(err));
     }, 2000);
 </script>
 

@@ -58,12 +58,31 @@ class DashboardController extends Controller
 
     public function get_incident_count() {
         $data = DB::select("
-            select count(*) as incident_count from tkbm.incidents i
+            select count(case when i.incident_status != 'resolved' then 1 end) as incident_count from tkbm.incidents i
             group by i.incident_status
-            having i.incident_status != 'resolved'
         ");
 
         return $data;
+    }
+
+    public function get_total_and_break() {
+        $data = DB::select("
+            SELECT count(*) as total, count(case when dl.status = 'working' then 1 end) as working
+            FROM tkbm.device_log dl
+            JOIN (
+                SELECT device_id, MAX(timestamp) AS latest_ts
+                FROM tkbm.device_log
+                GROUP BY device_id
+            ) latest
+            ON dl.device_id = latest.device_id AND dl.timestamp = latest.latest_ts 
+        ");
+
+        return $data;
+    }
+
+    public function get_total_and_break_view() : View
+    {
+        return view('templates.total_and_break_template', ['data' => $this->get_total_and_break()]);
     }
 
     public function get_incident_count_view() : View

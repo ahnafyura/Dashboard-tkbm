@@ -70,7 +70,7 @@
 
                     <div class="col-3">
                         <div class="card border-2 base-border-color base-font-color base-card-background-color  min-card-size shadow rounded-3 p-3 h-100">
-                            <h4> Physical Load Index </h4>
+                            <h4> Average Fatigue </h4>
 
                             <div class="d-flex justify-content-center align-items-center h-100">
                                 <h1 class=> 0% </h1>

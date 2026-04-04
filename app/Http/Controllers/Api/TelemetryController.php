@@ -27,7 +27,7 @@ class TelemetryController extends Controller
             'work_time'      => ['required', 'int'],
             'fatigue'        => ['required', 'numeric', 'between:0,1'],
             'sp_o2'          => ['required', 'numeric', 'between:0,1'],
-            'status'         => ['required', 'string', 'in:working,break,incident']
+            'status'         => ['required', 'string', 'in:working,break']
         ]);
 
         $data = $validator->validated();

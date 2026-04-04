@@ -27,7 +27,7 @@ function secondsToHms($seconds) {
                     @endif
                 </div> --}}
 
-                <div class="col-3">
+                <div class="col-2">
                     @if ($snapshot->is_active)
                     {{ $snapshot->battery_level * 100}}%
                     @else

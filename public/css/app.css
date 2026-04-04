@@ -1,3 +1,7 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .min-card-size {
     min-height: 300px;
 }

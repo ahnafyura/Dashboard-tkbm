@@ -16,7 +16,7 @@
                 ZONE
             </div> --}}
 
-            <div class="col-3">
+            <div class="col-2">
                 BATTERY
             </div>
 

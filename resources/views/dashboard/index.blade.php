@@ -28,7 +28,7 @@
                         <div class="card border-2 base-border-color base-font-color base-card-background-color  rounded-5 shadow">
                             <div class="row m-3  d-flex align-items-center justify-content-between">
                                 <div class="col-auto d-flex align-items-center">
-                                    <span id="total-devices"> </span> &nbsp; Aktif
+                                    <span id="total-devices"> .../... </span> &nbsp; Aktif
                                 </div>
                                 <div class="col-auto d-flex align-items-center justify-content-center">
                                     Update: &nbsp; <span id="seconds">0</span>s yang lalu
@@ -56,7 +56,7 @@
                             <h4 class="mb-3">Active Incidents</h4>
                             <div class="d-flex justify-content-center align-items-center text-center h-100">
                                 <div>
-                                    <h1 class="mb-3">0</h1>
+                                    <h1 id="active-incidents-counter" class="mb-3"> ... </h1>
                                     {{-- <div class="card base-card-background-color  rounded-5 p-2">0 Critical</div> --}}
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
                             <h4> Average Fatigue </h4>
 
                             <div class="d-flex justify-content-center align-items-center h-100">
-                                <h1 id="avg-fatigue"> </h1>
+                                <h1 id="avg-fatigue"> ... </h1>
                             </div>
                         </div>
                     </div>
@@ -135,6 +135,13 @@
         .then(res => res.text())
             .then(html => {
                 document.getElementById('avg-fatigue').innerHTML = html;
+            })
+            .catch(err => console.error(err));
+        
+        fetch('/fetch-incident-count')
+        .then(res => res.text())
+            .then(html => {
+                document.getElementById('active-incidents-counter').innerHTML = html;
             })
             .catch(err => console.error(err));
     }, 1500);

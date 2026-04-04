@@ -47,6 +47,10 @@
     background-color: #cbe6af;
 }
 
+.card-bg-incident {
+    background-color: rgb(245, 87, 87);
+}
+
 .base-font-color {
     color: #000000;
 }

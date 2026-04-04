@@ -77,7 +77,15 @@ function secondsToHms($seconds) {
                 </div>
 
                 <div class="col-3">
-                    <div class="card py-2 border-2 second-card-background-color base-font-color rounded-5 text-center"> {{ $snapshot->status }} </div>
+                    @if($snapshot->incident_count <= 0)
+                    <div class="card py-2 border-2 second-card-background-color base-font-color rounded-5 text-center"> 
+                        {{ $snapshot->status }} 
+                    </div>
+                    @else
+                    <div class="card py-2 border-2 card-bg-incident base-font-color rounded-5 text-center"> 
+                        INCIDENT 
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>

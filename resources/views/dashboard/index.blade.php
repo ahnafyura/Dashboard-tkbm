@@ -144,7 +144,7 @@
                 document.getElementById('active-incidents-counter').innerHTML = html;
             })
             .catch(err => console.error(err));
-    }, 1500);
+    }, 2000);
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

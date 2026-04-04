@@ -1,6 +1,8 @@
-<div class="col-auto px-0" style="height: 100vh;">
-    <div id="sidebar" class="collapse collapse-horizontal border-bottom border-end base-border-color border-2">
+<div class="col-auto px-0">
+    <div id="sidebar" class="collapse collapse-horizontal border-bottom border-end base-border-color border-2 vh-100">
         <div class="mx-5 pt-5 h-100" style="min-width: 128px;">
+
+            <h1> SENSE </h1>
 
             <a href="/dashboard" class="text-decoration-none">
                 <div class="card base-card-background-color shadow p-4 mt-5">

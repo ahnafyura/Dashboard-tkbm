@@ -22,7 +22,7 @@
                 {{-- title row --}}
                 <div class="row">
                     <div class="col-6">
-                        <h1 class="base-font-color"> Informasi Kondisi Pekerja</h1>
+                        <h2 class="base-font-color"> Informasi Kondisi Pekerja</h2>
                     </div>
                     <div class="col-6">
                         <div class="card border-2 base-border-color base-font-color base-card-background-color  rounded-5 shadow">

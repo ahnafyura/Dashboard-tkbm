@@ -35,7 +35,7 @@ function secondsToHms($seconds) {
                     @endif
                 </div>
 
-                <div class="col-2">
+                <div class="col-3">
                     @if ($snapshot->is_active)
                     {{ secondsToHms($snapshot->uptime) }}
                     @else

@@ -20,7 +20,7 @@
                 BATTERY
             </div>
 
-            <div class="col-2">
+            <div class="col-3">
                 UPTIME
             </div>
 

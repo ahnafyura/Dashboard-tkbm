@@ -80,7 +80,7 @@
                 </div>
 
                 {{-- telemetrys --}}
-                <div class="card border-2 base-border-color base-font-color base-card-background-color  shadow mt-5 h-50 p-3">
+                <div class="card border-2 base-border-color base-font-color base-card-background-color shadow mt-5 p-3">
                     <div class="row">
                         <h2> Live telemetry field</h2>
                     </div>

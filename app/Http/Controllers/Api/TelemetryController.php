@@ -32,6 +32,22 @@ class TelemetryController extends Controller
 
         $data = $validator->validated();
 
+        $test = DB::select('
+        select count(*) as count from tkbm.devices 
+        where device_id = ?
+        ', [$data['device_id']]);
+
+        if ($test[0]->count <= 0) {
+            DB::insert('
+            INSERT INTO tkbm.devices (device_id, last_active, is_active)
+            VALUES (?, ?, ?)
+            ', [
+                $data['device_id'],
+                now(),
+                1
+            ]);
+        }
+
         DB::insert(
             'INSERT INTO tkbm.device_log 
                 (device_id, 

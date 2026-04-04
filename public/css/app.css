@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -25,4 +25,34 @@ body {
 .base-border-color {
     border-color: #123456 !important;
 }
+ */
+
+ body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.min-card-size {
+    min-height: 300px;
+}
+
+.base-background-color {
+    background-color: #e9f1e1;
+}
+
+.base-card-background-color {
+    background-color: #e3e7e0;
+}
+
+.second-card-background-color {
+    background-color: #cbe6af;
+}
+
+.base-font-color {
+    color: #000000;
+}
+
+.base-border-color {
+    border-color: #6175895b !important;
+}
+
 

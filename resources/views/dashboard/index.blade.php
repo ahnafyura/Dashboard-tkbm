@@ -73,7 +73,7 @@
                             <h4> Average Fatigue </h4>
 
                             <div class="d-flex justify-content-center align-items-center h-100">
-                                <h1 class=> 0% </h1>
+                                <h1 id="avg-fatigue"> </h1>
                             </div>
                         </div>
                     </div>
@@ -129,7 +129,14 @@
             .then(html => {
                 document.getElementById('total-devices').innerHTML = html;
             })
-            .catch(err => console.error(err))
+            .catch(err => console.error(err));
+        
+        fetch('/fetch-avg-fatigue')
+        .then(res => res.text())
+            .then(html => {
+                document.getElementById('avg-fatigue').innerHTML = html;
+            })
+            .catch(err => console.error(err));
     }, 1500);
 </script>
 

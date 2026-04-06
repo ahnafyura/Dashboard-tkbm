@@ -3,6 +3,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 </head>
 
 <body class="base-background-color">
@@ -25,7 +26,8 @@
                         <h2 class="base-font-color"> Informasi Kondisi Pekerja</h2>
                     </div>
                     <div class="col-6">
-                        <div class="card border-2 base-border-color base-font-color base-card-background-color  rounded-5 shadow">
+                        <div
+                            class="card border-2 base-border-color base-font-color base-card-background-color  rounded-5 shadow">
                             <div class="row m-3  d-flex align-items-center justify-content-between">
                                 <div class="col-auto d-flex align-items-center">
                                     <span id="total-devices"> .../... </span> &nbsp; Aktif
@@ -94,7 +96,7 @@
                 document.getElementById('total-devices').innerHTML = html;
             })
             .catch(err => console.error(err));
-    }, 2000);
+    }, 3000);
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

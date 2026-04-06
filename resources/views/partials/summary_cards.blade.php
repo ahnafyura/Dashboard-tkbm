@@ -58,5 +58,5 @@
         document.getElementById('total-break').innerHTML = html;
     })
     .catch(err => console.error(err));
-    }, 2000)
+    }, 5000)
 </script>
